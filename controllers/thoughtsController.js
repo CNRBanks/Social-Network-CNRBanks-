@@ -12,7 +12,9 @@ module.exports = {
     Thoughts.findOne({ _id: req.params.thoughtId })
       .then((thought) =>
         !thought
-          ? res.status(404).json({ message: "Aint no thought with that ID son!" })
+          ? res
+              .status(404)
+              .json({ message: "Aint no thought with that ID son!" })
           : res.json(thought)
       )
       .catch((err) => res.status(500).json(err));
@@ -48,7 +50,9 @@ module.exports = {
     )
       .then((thought) =>
         !thought
-          ? res.status(404).json({ message: "No thoughts with this id you son of a gun!" })
+          ? res
+              .status(404)
+              .json({ message: "No thoughts with this id you son of a gun!" })
           : res.json(thought)
       )
       .catch((err) => {
@@ -61,20 +65,18 @@ module.exports = {
     Thoughts.findOneAndDelete({ _id: req.params.thoughtId })
       .then((thought) =>
         !thought
-          ? res.status(404).json({ message: "No thought with this id, stoopid!" })
-          : User.findOneAndUpdate
-              { thoughts: req.params.thoughtId },
-              { $pull: { thoughts: req.params.thoughtId } },
-              { new: true }
-            )
-      )
-      .then((user) =>
-        !user
           ? res
               .status(404)
-              .json({ message: "Thought created but no user with this id gosh darnit!" })
-          : res.json({ message: "thought deleted frfr!" })
+              .json({ message: "No thought with this id, stoopid!" })
+          : res.json(thought)
       )
+      // .then((user) =>
+      //   !user
+      //     ? res
+      //         .status(404)
+      //         .json({ message: "Thought created but no user with this id gosh darnit!" })
+      //     : res.json({ message: "thought deleted frfr!" })
+      // )
       .catch((err) => res.status(500).json(err));
   },
   // Add a thought response
@@ -86,7 +88,9 @@ module.exports = {
     )
       .then((thought) =>
         !thought
-          ? res.status(404).json({ message: "No thought with this id ya dingus!" })
+          ? res
+              .status(404)
+              .json({ message: "No thought with this id ya dingus!" })
           : res.json(thought)
       )
       .catch((err) => res.status(500).json(err));
@@ -100,7 +104,11 @@ module.exports = {
     )
       .then((thought) =>
         !thought
-          ? res.status(404).json({ message: "No thought with this id you freakin mouth breather!" })
+          ? res
+              .status(404)
+              .json({
+                message: "No thought with this id you freakin mouth breather!",
+              })
           : res.json(thought)
       )
       .catch((err) => res.status(500).json(err));
