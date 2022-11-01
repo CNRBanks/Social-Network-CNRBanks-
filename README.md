@@ -24,7 +24,8 @@ This is an API for a social network web application in which users can share the
 
 ## Preview
 
-
+(./preview/image1.png)
+(./preview/image2.png)
 
 ## License
 
