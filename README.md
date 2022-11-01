@@ -1,12 +1,32 @@
 # Social Network CNRBanks
 
-# Description
+## Table of Contents
+
+- [Description](#description)
+- [Installations](#installations)
+- [Preview](#preview)
+- [License](#license)
+
+## Description
+
+This is an API for a social network web application in which users can share their thoughts, react to friends’ thoughts, and create a friend list. I used Express.js for routing, a MongoDB database, and a Mongoose ODM. 
+
+## Installations
+
+- MongoDB https://www.mongodb.com/docs/manual/administration/install-community/
+
+- Open in terminal
+- npm install express
+- npm install mongoose --save
+- npm install moment --save
+- npm install
+- npm start
+
+## Preview
 
 
-# Table of Contents
 
-
-# License
+## License
 
 <details><summary>MIT License</summary>
 
@@ -22,4 +42,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 </blockquote>
 </details>
 
-# Contributing
+## Contributing
