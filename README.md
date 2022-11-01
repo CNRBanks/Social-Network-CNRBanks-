@@ -24,8 +24,8 @@ This is an API for a social network web application in which users can share the
 
 ## Preview
 
-(./preview/image1.png)
-(./preview/image2.png)
+![image1](./preview/image1.png)
+![image2](./preview/image2.png)
 
 ## License
 
@@ -44,3 +44,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 </details>
 
 ## Contributing
+
+- Express https://www.npmjs.com/package/express
+- Mongoose https://www.npmjs.com/package/mongoose
